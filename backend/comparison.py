@@ -1,6 +1,19 @@
 from fastapi import APIRouter
 from pydantic import BaseModel, Field
 
+def is_missing(value: str | None) -> bool:
+    if value is None:
+        return True
+
+    return value.strip().casefold() in {
+        "",
+        "not provided",
+        "not available",
+        "not found",
+        "unknown",
+        "n/a",
+        "na",
+    }
 
 router = APIRouter(
     prefix="/api/v1",
@@ -110,8 +123,8 @@ def compare_products(request: CompareRequest):
             "No specifications were supplied for either product."
         )
     elif any(
-        not a.specifications.get(name)
-        or not b.specifications.get(name)
+        is_missing(a.specifications.get(name))
+        or is_missing(b.specifications.get(name))
         for name in specification_names
     ):
         warnings.append(

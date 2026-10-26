@@ -4,15 +4,17 @@ import requests
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
-
 from rag import retrieve_context
 from comparison import router as comparison_router
+from reviews import router as reviews_router
 
 logger = logging.getLogger("uvicorn.error")
 
 app = FastAPI(title="BuyWisely API")
 
 app.include_router(comparison_router)
+
+app.include_router(reviews_router)
 
 # Local development only.
 # Restrict allowed origins before publishing the application.
