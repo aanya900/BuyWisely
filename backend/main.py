@@ -8,6 +8,7 @@ from rag import retrieve_context
 from comparison import router as comparison_router
 from reviews import router as reviews_router
 from recommendations import router as recommendations_router
+from warnings_analysis import router as warnings_router
 
 logger = logging.getLogger("uvicorn.error")
 
@@ -16,6 +17,7 @@ app = FastAPI(title="BuyWisely API")
 app.include_router(comparison_router)
 app.include_router(reviews_router)
 app.include_router(recommendations_router)
+app.include_router(warnings_router)
 
 # Local development only.
 # Restrict allowed origins before publishing the application.
