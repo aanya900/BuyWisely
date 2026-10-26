@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "BuyWisely",
+  "version": "0.1.0",
+  "description": "AI-powered shopping intelligence",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["http://localhost:8000/*"]
+}

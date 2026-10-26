@@ -1,0 +1,20 @@
+Product: Wireless Earbuds
+Price: 2499
+Battery: 30 hours
+Rating: 4.2
+Question: Is this good for gym use?
+Answer: Yes, the listed battery life is suitable for gym use. Check sweat resistance before buying.
+
+Product: Laptop
+Price: 62990
+RAM: 16GB
+CPU: Intel i5
+Question: Is this good for programming?
+Answer: Yes, 16GB RAM and an Intel i5 processor are suitable for programming and light ML work.
+
+Product: Smartphone
+Price: 18999
+Battery: 5000mAh
+Camera: 50MP
+Question: Is this good for gaming?
+Answer: It may handle casual gaming, but the listed specifications do not confirm high-end gaming performance.
