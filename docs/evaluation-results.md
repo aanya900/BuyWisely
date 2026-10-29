@@ -119,3 +119,34 @@ Limitations:
 - No end-of-answer token.
 - No demonstrated shopping-answer accuracy yet.
 - Validation loss does not establish factual reliability.
+
+
+## V2 Inference Server
+
+Server:
+`llm_server_v2:app`, port 8002
+
+Checkpoint:
+`model/artifacts_v2/best_checkpoint.pt`
+
+Checks:
+- Health endpoint: Not yet recorded.
+- Short generation request: Not yet recorded.
+- Completion-only response: Not yet verified.
+- Oversized prompt rejected with 422: Passed.
+
+Oversized-input test:
+- Input length: 600 UTF-8 byte tokens.
+- Model context limit: 512 UTF-8 byte tokens.
+- Actual HTTP status: 422.
+- Response correctly identified that the prompt exceeded the context limit.
+
+Observed answer:
+Not yet recorded. The oversized-input request was rejected before generation.
+
+Quality notes:
+Input-length validation worked for this test.
+Generation quality has not yet been evaluated.
+
+Integration status:
+Not yet connected to the main BuyWisely API.
