@@ -1,0 +1,28 @@
+{
+  "timestamp_utc": "2026-11-04T10:48:16.221394+00:00",
+  "prompt": "Product: Earbuds\nBattery: 30 hours\nQuestion: What battery life is listed?\nAnswer:",
+  "expected_fact": "The listed battery life is 30 hours.",
+  "manual_quality_review": "Pending",
+  "status_code": 200,
+  "elapsed_seconds": 0.313,
+  "server_response": {
+    "response": " ce pt atere ce c ce cered c c an at c ced atist cerete pr ared ant at at ant c ",
+    "model": "BuyWisely-TinyGPT-v2",
+    "input_tokens": 81,
+    "generated_tokens": 80,
+    "context_length": 512,
+    "input_truncated": false,
+    "warnings": [
+      "Generation uses a sliding context window.",
+      "No end-of-answer token is configured; generation runs for the requested number of byte tokens.",
+      "Generated text may contain malformed UTF-8 sequences, displayed as replacement characters.",
+      "Answer accuracy has not been established."
+    ]
+  },
+  "checks": {
+    "correct_model": true,
+    "input_not_truncated": true,
+    "nonempty_completion": true
+  },
+  "structural_checks_passed": true
+}

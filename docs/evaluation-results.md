@@ -150,3 +150,35 @@ Generation quality has not yet been evaluated.
 
 Integration status:
 Not yet connected to the main BuyWisely API.
+
+
+### Short Generation Check
+
+Command:
+`python scripts/check_v2_generation.py`
+
+Actual HTTP status:
+200
+
+Structural checks:
+- Correct model: Passed.
+- Input not truncated: Passed.
+- Nonempty completion: Passed.
+
+Response time:
+0.313 seconds for this request.
+
+Observed answer:
+" ce pt atere ce c ce cered c c an at c ced atist cerete pr ared ant at at ant c "
+
+Manual assessment:
+Failed. The generated text is repetitive and unintelligible.
+It does not state the listed battery life of 30 hours.
+
+Conclusion:
+The inference service returned a structurally valid response,
+but the model did not produce a useful answer.
+
+Scope:
+One short synthetic prompt. This does not establish general
+shopping-answer accuracy or RAG performance.
