@@ -1,0 +1,42 @@
+{
+  "experiment": "single_example_memorization",
+  "device": "cpu",
+  "model_config": {
+    "vocab_size": 256,
+    "n_embd": 64,
+    "n_head": 4,
+    "n_layer": 2,
+    "block_size": 256
+  },
+  "prompt": "Product: Earbuds\nBattery: 30 hours\nQuestion: What battery life is listed?\nAnswer:",
+  "expected_completion": " The listed battery life is 30 hours.",
+  "actual_completion": " The listed battery life is 30 hours.",
+  "exact_training_example_match": true,
+  "steps_completed": 100,
+  "history": [
+    {
+      "step": 1,
+      "training_loss": 5.831099033355713,
+      "completion": "8�\u0018����\u0014�4��}٩��U��Z\u00185,��\f�l!�FÕ���",
+      "exact_training_example_match": false
+    },
+    {
+      "step": 50,
+      "training_loss": 0.6551513075828552,
+      "completion": " The listed battery life is 30 hourst",
+      "exact_training_example_match": false
+    },
+    {
+      "step": 100,
+      "training_loss": 0.055263783782720566,
+      "completion": " The listed battery life is 30 hours.",
+      "exact_training_example_match": true
+    }
+  ],
+  "limitations": [
+    "The prompt and answer were included in training.",
+    "The output length was supplied to the diagnostic.",
+    "Success does not demonstrate generalization.",
+    "No V2 checkpoint was loaded or overwritten."
+  ]
+}
